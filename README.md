@@ -1,1 +1,2 @@
-# week-11
+## Yantizhanov Alisher 
+### Homework 3
