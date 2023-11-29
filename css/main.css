@@ -8,8 +8,13 @@
 body {
     background-color: black;
     font-size: 17;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', Arial, sans-serif;
     color: white;
+    background-color: rgb(29, 20, 0);
+    background-image: url(../img/coding.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:overlay;
 }
 
 main {
@@ -20,62 +25,101 @@ main {
 
 header > h1{
     text-align: center;
-    padding: 8px;
+    padding: 20px 0px 8px 0px;
 }
 
 article {
     width: 400px;
-    border: 4px solid white;
+    border: 2px solid;
     border-radius: 8px;
     margin: 10px 12px;
     text-align: left;
 }
 
 article > h2 {
-    color: gray;
+    color: rgb(255, 255, 255);
     padding: 4px 8px;
+    border-radius: 2px 2px 0px 0px;
+    background-color: rgb(44, 44, 44);
+    background-repeat: repeat;
+    background-size:contain;
+    background-blend-mode:difference;
 }
 
 article:first-of-type {
-    border: 4px solid gray;
+    border-color:rgb(222, 0, 0);    
 }
 
+#todo h2 {
+    background-image: url(../img/tomato.jpeg);
+}
+
+
+
 #inprogress {
-    border: 4px solid red;
+    border-color: rgb(255, 208, 0);
 }
 
 #inprogress h2 {
-    color:red;
+    background-image: url(../img/cheese.jpeg);
 }
 
 #done {
-    border-color: green;
+    border-color: rgb(43, 255, 0);
 }
 
 #done h2 {
-    color: green;
+    background-image: url(../img/lettuce.avif);
 }
 
 ul {
     list-style-type: none;
+    
 }
 
 /* капс нельзя надо через цсс */
 
 ul li {
     padding: 6px 8px;
-    text-transform: uppercase;
 }
 
-.progress li:nth-child(odd) {
+.progress li:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.do li:nth-child(odd) {
+.do li:nth-child(even) {
     background-color: rgba(3, 200, 190, 0.2);
 }
 
-.fin li:nth-child(odd) {
+.fin li:nth-child(even) {
     background-color: rgba(67, 35, 190, 0.2);
 }
+
+.item {
+    margin-left: 10px;
+}
+
+input[type="checkbox"]:checked + span::after {
+    content: "\2705";
+    width: 20px;
+    position: relative;
+    left: 10px;
+    font-size: 15px;
+}
+
+.bottom {
+    width:100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bottom img {
+    width: 500px;
+    margin-top: 20px;
+}
+
+
+
+
+
 
